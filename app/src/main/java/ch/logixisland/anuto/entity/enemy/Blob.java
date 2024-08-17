@@ -49,7 +49,7 @@ public class Blob extends Enemy implements SpriteTransformation {
         }
     }
 
-    private ReplicatedSprite mSprite;
+    private final ReplicatedSprite mSprite;
 
     private Blob(GameEngine gameEngine) {
         super(gameEngine, ENEMY_PROPERTIES);

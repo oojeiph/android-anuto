@@ -7,7 +7,7 @@ import ch.logixisland.anuto.util.container.KeyValueStore;
 
 public class GamePersister {
 
-    private List<Persister> mPersisterList = new ArrayList<>();
+    private final List<Persister> mPersisterList = new ArrayList<>();
 
     public void registerPersister(Persister persister) {
         mPersisterList.add(persister);

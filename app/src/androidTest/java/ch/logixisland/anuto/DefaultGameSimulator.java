@@ -125,7 +125,6 @@ public class DefaultGameSimulator extends GameSimulator {
 
         while (iterator.hasNext()) {
             Tower tower = iterator.next();
-            final int tier = mTowerTiers.getTowerTier(tower);
 
             // check if enhancing is possible
             if (!tower.isEnhanceable()) {

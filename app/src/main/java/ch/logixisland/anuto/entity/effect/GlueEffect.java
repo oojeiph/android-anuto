@@ -25,13 +25,13 @@ public class GlueEffect extends Effect implements SpriteTransformation, AreaObse
         SpriteTemplate mSpriteTemplate;
     }
 
-    private float mAngle;
-    private float mIntensity;
-    private int mAlphaStep;
-    private AreaObserver mAreaObserver;
+    private final float mAngle;
+    private final float mIntensity;
+    private final int mAlphaStep;
+    private final AreaObserver mAreaObserver;
 
-    private Paint mPaint;
-    private StaticSprite mSprite;
+    private final Paint mPaint;
+    private final StaticSprite mSprite;
 
     public GlueEffect(Entity origin, Vector2 position, float intensity, float duration) {
         super(origin, duration);

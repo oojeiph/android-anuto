@@ -62,12 +62,12 @@ public class RocketLauncher extends Tower implements SpriteTransformation {
     private float mExplosionRadius;
     private float mAngle = 90f;
     private Rocket mRocket;
-    private TickTimer mRocketLoadTimer;
+    private final TickTimer mRocketLoadTimer;
     private final Aimer mAimer = new Aimer(this);
 
-    private StaticSprite mSprite;
-    private StaticSprite mSpriteRocket; // used for preview only
-    private Sound mSound;
+    private final StaticSprite mSprite;
+    private final StaticSprite mSpriteRocket; // used for preview only
+    private final Sound mSound;
 
     private RocketLauncher(GameEngine gameEngine) {
         super(gameEngine, TOWER_PROPERTIES);

@@ -31,7 +31,7 @@ public class TowerInserter {
 
     private Tower mInsertedTower;
     private Plateau mCurrentPlateau;
-    private Collection<Listener> mListeners = new CopyOnWriteArrayList<>();
+    private final Collection<Listener> mListeners = new CopyOnWriteArrayList<>();
 
     public TowerInserter(GameEngine gameEngine, GameState gameState, EntityRegistry entityRegistry,
                          TowerSelector towerSelector, TowerAging towerAging, ScoreBoard scoreBoard) {

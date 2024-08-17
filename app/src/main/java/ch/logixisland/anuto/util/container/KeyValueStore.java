@@ -1,6 +1,5 @@
 package ch.logixisland.anuto.util.container;
 
-import android.annotation.SuppressLint;
 import android.content.res.Resources;
 
 import org.json.JSONArray;
@@ -11,7 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -24,10 +23,9 @@ import ch.logixisland.anuto.util.math.Vector2;
 
 public class KeyValueStore {
 
-    @SuppressLint("SimpleDateFormat")
-    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
 
-    private JSONObject mJsonObject;
+    private final JSONObject mJsonObject;
 
     public KeyValueStore() {
         mJsonObject = new JSONObject();
@@ -38,15 +36,10 @@ public class KeyValueStore {
     }
 
     public static KeyValueStore fromResources(Resources resources, int resourceId) {
-        InputStream stream = resources.openRawResource(resourceId);
-
-        try {
+        try (InputStream stream = resources.openRawResource(resourceId)) {
             return fromStream(stream);
-        } finally {
-            try {
-                stream.close();
-            } catch (IOException ignored) {
-            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -54,7 +47,7 @@ public class KeyValueStore {
         try {
             char[] buffer = new char[1024];
             StringBuilder stringBuilder = new StringBuilder();
-            InputStreamReader reader = new InputStreamReader(input, Charset.forName("UTF-8"));
+            InputStreamReader reader = new InputStreamReader(input, StandardCharsets.UTF_8);
 
             while (true) {
                 int count = reader.read(buffer, 0, buffer.length);
@@ -73,7 +66,7 @@ public class KeyValueStore {
 
     public void toStream(OutputStream output) {
         try {
-            output.write(mJsonObject.toString().getBytes(Charset.forName("UTF-8")));
+            output.write(mJsonObject.toString().getBytes(StandardCharsets.UTF_8));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

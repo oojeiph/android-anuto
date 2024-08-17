@@ -7,7 +7,7 @@ import ch.logixisland.anuto.util.math.Vector2;
 
 public abstract class Shot extends Entity {
 
-    private Entity mOrigin;
+    private final Entity mOrigin;
     private float mSpeed;
     private Vector2 mDirection;
     private boolean mEnabled = true;

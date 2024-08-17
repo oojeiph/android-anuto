@@ -6,7 +6,6 @@ import android.graphics.Paint;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 import ch.logixisland.anuto.engine.logic.GameEngine;
 import ch.logixisland.anuto.engine.logic.entity.Entity;
@@ -29,7 +28,7 @@ public class StraightLaser extends Effect {
     private final static int ALPHA_STEP = (int) (ALPHA_START / (GameEngine.TARGET_FRAME_RATE * VISIBLE_EFFECT_DURATION));
 
     private class LaserDrawable implements Drawable {
-        private Paint mPaint;
+        private final Paint mPaint;
         private int mAlpha = ALPHA_START;
 
         public LaserDrawable() {
@@ -60,11 +59,11 @@ public class StraightLaser extends Effect {
         }
     }
 
-    private float mDamage;
-    private Vector2 mLaserTo;
-    private Collection<Flyer> mStunnedFliers = new ArrayList<>();
+    private final float mDamage;
+    private final Vector2 mLaserTo;
+    private final Collection<Flyer> mStunnedFliers = new ArrayList<>();
 
-    private LaserDrawable mDrawObject;
+    private final LaserDrawable mDrawObject;
 
     public StraightLaser(Entity origin, Vector2 position, Vector2 laserTo, float damage) {
         super(origin, EFFECT_DURATION);

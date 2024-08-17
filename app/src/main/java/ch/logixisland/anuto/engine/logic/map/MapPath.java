@@ -1,6 +1,5 @@
 package ch.logixisland.anuto.engine.logic.map;
 
-import java.util.Collections;
 import java.util.List;
 
 import ch.logixisland.anuto.util.math.Vector2;

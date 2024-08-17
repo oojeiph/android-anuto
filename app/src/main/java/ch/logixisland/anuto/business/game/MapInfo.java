@@ -2,9 +2,9 @@ package ch.logixisland.anuto.business.game;
 
 public class MapInfo {
 
-    private String mMapId;
-    private int mMapNameResId;
-    private int mMapDataResId;
+    private final String mMapId;
+    private final int mMapNameResId;
+    private final int mMapDataResId;
 
     MapInfo(String mapId, int mapNameResId, int mapDataResId) {
         mMapId = mapId;

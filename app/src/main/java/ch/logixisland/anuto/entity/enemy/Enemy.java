@@ -33,7 +33,7 @@ public abstract class Enemy extends Entity {
         void enemyRemoved(Enemy enemy);
     }
 
-    private EnemyProperties mEnemyProperties;
+    private final EnemyProperties mEnemyProperties;
     private float mHealth;
     private float mMaxHealth;
     private float mSpeedModifier;
@@ -44,7 +44,7 @@ public abstract class Enemy extends Entity {
     private boolean mBeingTeleported;
     private boolean mWasTeleported;
 
-    private HealthBar mHealthBar;
+    private final HealthBar mHealthBar;
 
     private final List<Listener> mListeners = new CopyOnWriteArrayList<>();
 
@@ -238,7 +238,7 @@ public abstract class Enemy extends Entity {
         Vector2 pos = getPosition();
 
         while (index > 0) {
-            Vector2 wp = mWayPoints.get(index);;
+            Vector2 wp = mWayPoints.get(index);
             float toWpDist = pos.distanceTo(wp);
 
             if (dist > toWpDist) {

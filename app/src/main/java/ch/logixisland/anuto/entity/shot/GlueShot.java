@@ -25,13 +25,13 @@ public class GlueShot extends Shot implements SpriteTransformation {
         public SpriteTemplate mSpriteTemplate;
     }
 
-    private float mIntensity;
+    private final float mIntensity;
 
-    private float mDuration;
-    private Vector2 mTarget;
-    private AnimatedSprite mSprite;
+    private final float mDuration;
+    private final Vector2 mTarget;
+    private final AnimatedSprite mSprite;
 
-    private Sound mSound;
+    private final Sound mSound;
 
     public GlueShot(Entity origin, Vector2 position, Vector2 target, float intensity, float duration) {
         super(origin);

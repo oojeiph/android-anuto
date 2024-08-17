@@ -14,7 +14,7 @@ public class EnemyProperties {
 
     public static class Builder {
 
-        private EnemyProperties mResult = new EnemyProperties();
+        private final EnemyProperties mResult = new EnemyProperties();
 
         public Builder setHealth(int health) {
             mResult.mHealth = health;

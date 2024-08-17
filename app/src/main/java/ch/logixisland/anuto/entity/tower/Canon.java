@@ -68,12 +68,12 @@ public class Canon extends Tower implements SpriteTransformation {
     private boolean mReboundActive;
     private final Aimer mAimer = new Aimer(this);
 
-    private SampledFunction mReboundFunction;
+    private final SampledFunction mReboundFunction;
 
-    private StaticSprite mSpriteBase;
-    private StaticSprite mSpriteCanon;
+    private final StaticSprite mSpriteBase;
+    private final StaticSprite mSpriteCanon;
 
-    private Sound mSound;
+    private final Sound mSound;
 
     private Canon(GameEngine gameEngine) {
         super(gameEngine, TOWER_PROPERTIES);

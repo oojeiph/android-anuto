@@ -2,8 +2,6 @@ package ch.logixisland.anuto.entity.effect;
 
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 import ch.logixisland.anuto.engine.logic.GameEngine;
 import ch.logixisland.anuto.engine.logic.entity.Entity;
@@ -14,8 +12,8 @@ import ch.logixisland.anuto.util.math.Vector2;
 
 public class AreaObserver implements Entity.Listener {
 
-    private Vector2 mPosition;
-    private float mRange;
+    private final Vector2 mPosition;
+    private final float mRange;
     private boolean mFinished;
 
     private final GameEngine mGameEngine;

@@ -76,10 +76,10 @@ public class DualCanon extends Tower implements SpriteTransformation {
     private SubCanon[] mCanons = new SubCanon[2];
     private final Aimer mAimer = new Aimer(this);
 
-    private StaticSprite mSpriteBase;
-    private StaticSprite mSpriteTower;
+    private final StaticSprite mSpriteBase;
+    private final StaticSprite mSpriteTower;
 
-    private Sound mSound;
+    private final Sound mSound;
 
     private DualCanon(GameEngine gameEngine) {
         super(gameEngine, TOWER_PROPERTIES);

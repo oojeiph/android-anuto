@@ -23,7 +23,7 @@ public class GameState implements ScoreBoard.Listener, Persister {
     private boolean mGameStarted = false;
     private int mFinalScore = 0;
 
-    private List<Listener> mListeners = new CopyOnWriteArrayList<>();
+    private final List<Listener> mListeners = new CopyOnWriteArrayList<>();
 
     public GameState(ScoreBoard scoreBoard, HighScores highScores, TowerSelector towerSelector) {
         mScoreBoard = scoreBoard;

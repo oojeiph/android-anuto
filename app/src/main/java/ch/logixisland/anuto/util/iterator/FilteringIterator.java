@@ -2,8 +2,8 @@ package ch.logixisland.anuto.util.iterator;
 
 class FilteringIterator<T> extends LazyIterator<T> {
 
-    private Predicate<? super T> mFilter;
-    private StreamIterator<T> mOriginal;
+    private final Predicate<? super T> mFilter;
+    private final StreamIterator<T> mOriginal;
 
     FilteringIterator(StreamIterator<T> original, Predicate<? super T> filter) {
         mOriginal = original;

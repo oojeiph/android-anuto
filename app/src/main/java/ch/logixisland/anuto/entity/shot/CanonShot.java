@@ -26,10 +26,10 @@ public class CanonShot extends Shot implements SpriteTransformation, TargetTrack
     }
 
     private float mAngle;
-    private float mDamage;
-    private TargetTracker mTracker;
+    private final float mDamage;
+    private final TargetTracker mTracker;
 
-    private StaticSprite mSprite;
+    private final StaticSprite mSprite;
 
     public CanonShot(Entity origin, Vector2 position, Enemy target, float damage) {
         super(origin);

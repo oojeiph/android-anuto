@@ -34,7 +34,7 @@ public class BasicPlateau extends Plateau implements SpriteTransformation {
         SpriteTemplate mSpriteTemplate;
     }
 
-    private StaticSprite mSprite;
+    private final StaticSprite mSprite;
 
     private BasicPlateau(GameEngine gameEngine) {
         super(gameEngine);

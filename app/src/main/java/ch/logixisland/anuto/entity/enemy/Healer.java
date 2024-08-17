@@ -2,7 +2,6 @@ package ch.logixisland.anuto.entity.enemy;
 
 import android.graphics.Canvas;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 
@@ -97,9 +96,9 @@ public class Healer extends Enemy implements SpriteTransformation {
         }
     }
 
-    private StaticData mStaticData;
+    private final StaticData mStaticData;
 
-    private ReplicatedSprite mSprite;
+    private final ReplicatedSprite mSprite;
 
     private Healer(GameEngine gameEngine) {
         super(gameEngine, ENEMY_PROPERTIES);

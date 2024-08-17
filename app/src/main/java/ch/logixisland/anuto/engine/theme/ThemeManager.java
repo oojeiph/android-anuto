@@ -22,9 +22,9 @@ public class ThemeManager implements SharedPreferences.OnSharedPreferenceChangeL
     private final Renderer mRenderer;
 
     private Theme mTheme;
-    private List<Theme> mAvailableThemes = new ArrayList<>();
+    private final List<Theme> mAvailableThemes = new ArrayList<>();
 
-    private List<Listener> mListeners = new CopyOnWriteArrayList<>();
+    private final List<Listener> mListeners = new CopyOnWriteArrayList<>();
 
     public ThemeManager(Context context, Renderer renderer) {
         mRenderer = renderer;

@@ -24,10 +24,10 @@ public class CanonShotMg extends Shot implements SpriteTransformation {
         public SpriteTemplate mSpriteTemplate;
     }
 
-    private float mAngle;
-    private float mDamage;
+    private final float mAngle;
+    private final float mDamage;
 
-    private StaticSprite mSprite;
+    private final StaticSprite mSprite;
 
     public CanonShotMg(Entity origin, Vector2 position, Vector2 direction, float damage) {
         super(origin);

@@ -52,7 +52,7 @@ public class Flyer extends Enemy implements SpriteTransformation {
 
     private float mAngle;
 
-    private ReplicatedSprite mSprite;
+    private final ReplicatedSprite mSprite;
 
     private Flyer(GameEngine gameEngine) {
         super(gameEngine, ENEMY_PROPERTIES);

@@ -70,9 +70,9 @@ public class Mortar extends Tower implements SpriteTransformation {
     private boolean mRebounding = false;
     private final Aimer mAimer = new Aimer(this);
 
-    private StaticSprite mSpriteBase;
-    private AnimatedSprite mSpriteCanon;
-    private Sound mSound;
+    private final StaticSprite mSpriteBase;
+    private final AnimatedSprite mSpriteCanon;
+    private final Sound mSound;
 
     private Mortar(GameEngine gameEngine) {
         super(gameEngine, TOWER_PROPERTIES);

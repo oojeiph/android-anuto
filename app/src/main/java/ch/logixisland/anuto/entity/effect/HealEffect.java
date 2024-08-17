@@ -39,12 +39,12 @@ public class HealEffect extends Effect {
         }
     }
 
-    private float mRange;
+    private final float mRange;
     private float mDrawRadius;
-    private float mHealAmount;
+    private final float mHealAmount;
 
-    private Drawable mDrawable;
-    private Collection<Enemy> mHealedEnemies;
+    private final Drawable mDrawable;
+    private final Collection<Enemy> mHealedEnemies;
     private StaticData mStaticData;
 
     public HealEffect(Entity origin, Vector2 position, float amount, float radius, Collection<Enemy> healedEnemies) {

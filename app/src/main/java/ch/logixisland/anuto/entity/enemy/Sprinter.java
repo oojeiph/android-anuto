@@ -56,8 +56,8 @@ public class Sprinter extends Enemy implements SpriteTransformation {
     }
 
     private float mAngle;
-    private StaticData mStatic;
-    private ReplicatedSprite mSprite;
+    private final StaticData mStatic;
+    private final ReplicatedSprite mSprite;
 
     private Sprinter(GameEngine gameEngine) {
         super(gameEngine, ENEMY_PROPERTIES);

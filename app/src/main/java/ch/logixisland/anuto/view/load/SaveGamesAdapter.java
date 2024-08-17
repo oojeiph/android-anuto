@@ -24,8 +24,6 @@ import ch.logixisland.anuto.util.StringUtils;
 
 public class SaveGamesAdapter extends BaseAdapter {
 
-    private static final Map<String, Bitmap> sThumbCache = new HashMap<>();
-
     private final WeakReference<Activity> mActivityRef;
     private final List<SaveGameInfo> mSaveGameInfos;
 
@@ -35,11 +33,11 @@ public class SaveGamesAdapter extends BaseAdapter {
     }
 
     static private class ViewHolder {
-        ImageView img_thumb;
-        TextView txt_datetime;
-        TextView txt_score;
-        TextView txt_waveNumber;
-        TextView txt_lives;
+        final ImageView img_thumb;
+        final TextView txt_datetime;
+        final TextView txt_score;
+        final TextView txt_waveNumber;
+        final TextView txt_lives;
 
         ViewHolder(View view) {
             img_thumb = view.findViewById(R.id.img_thumb);

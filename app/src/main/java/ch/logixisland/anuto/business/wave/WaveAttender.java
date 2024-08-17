@@ -28,7 +28,7 @@ class WaveAttender implements Enemy.Listener {
     private final List<MapPath> mPaths;
     private final Collection<Enemy> mRemainingEnemies = new ArrayList<>();
 
-    private int mWaveNumber;
+    private final int mWaveNumber;
     private int mWaveStartTickCount;
 
     private int mExtend;
@@ -78,7 +78,7 @@ class WaveAttender implements Enemy.Listener {
     }
 
     void modifyWaveReward(float modifier) {
-        mWaveReward *= modifier;
+        mWaveReward = (int) ((float) mWaveReward * modifier);
     }
 
     void start() {

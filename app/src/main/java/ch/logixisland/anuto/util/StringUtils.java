@@ -11,8 +11,8 @@ public final class StringUtils {
 
     }
 
-    private static DecimalFormat fmt0 = new DecimalFormat("0");
-    private static DecimalFormat fmt1 = new DecimalFormat("0.0");
+    private static final DecimalFormat fmt0 = new DecimalFormat("0");
+    private static final DecimalFormat fmt1 = new DecimalFormat("0.0");
 
     public static String formatSuffix(int value) {
         return formatSuffix(value, true);

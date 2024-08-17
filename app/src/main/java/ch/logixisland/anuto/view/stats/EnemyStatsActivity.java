@@ -14,13 +14,11 @@ import ch.logixisland.anuto.view.AnutoActivity;
 
 public class EnemyStatsActivity extends AnutoActivity implements ThemeManager.Listener {
 
-    private Context mAppContext;
-    private Theme mTheme;
-    private EntityRegistry mEntityRegistry;
+    private final Theme mTheme;
+    private final EntityRegistry mEntityRegistry;
 
     public EnemyStatsActivity() {
         AnutoApplication app = AnutoApplication.getInstance();
-        mAppContext = app.getApplicationContext();
         mTheme = app.getGameFactory().getGameEngine().getThemeManager().getTheme();
         mEntityRegistry = app.getGameFactory().getEntityRegistry();
     }

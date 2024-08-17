@@ -28,7 +28,7 @@ public class EnemiesAdapter extends BaseAdapter {
     private final List<Enemy> mEnemies;
 
     private final WeakReference<Activity> mActivityRef;
-    private Theme mTheme;
+    private final Theme mTheme;
 
     public EnemiesAdapter(Activity activity, Theme theme, EntityRegistry entityRegistry) {
         mActivityRef = new WeakReference<>(activity);
@@ -41,13 +41,13 @@ public class EnemiesAdapter extends BaseAdapter {
     }
 
     static private class ViewHolder {
-        ImageView img_enemy;
-        TextView txt_name;
-        TextView txt_health;
-        TextView txt_speed;
-        TextView txt_reward;
-        TextView txt_weak_against;
-        TextView txt_strong_against;
+        final ImageView img_enemy;
+        final TextView txt_name;
+        final TextView txt_health;
+        final TextView txt_speed;
+        final TextView txt_reward;
+        final TextView txt_weak_against;
+        final TextView txt_strong_against;
 
         ViewHolder(View view) {
             img_enemy = view.findViewById(R.id.img_enemy);
@@ -120,11 +120,11 @@ public class EnemiesAdapter extends BaseAdapter {
         viewHolder.txt_reward.setText(tmp);
 
         tmp = TextUtils.join("\n", enemyProperties.getWeakAgainst());
-        viewHolder.txt_weak_against.setText(tmp.length() > 0 ? tmp : activity.getString(R.string.none));
+        viewHolder.txt_weak_against.setText(!tmp.isEmpty() ? tmp : activity.getString(R.string.none));
         viewHolder.txt_weak_against.setTextColor(mTheme.getColor(R.attr.weakAgainstColor));
 
         tmp = TextUtils.join("\n", enemyProperties.getStrongAgainst());
-        viewHolder.txt_strong_against.setText(tmp.length() > 0 ? tmp : activity.getString(R.string.none));
+        viewHolder.txt_strong_against.setText(!tmp.isEmpty() ? tmp : activity.getString(R.string.none));
         viewHolder.txt_strong_against.setTextColor(mTheme.getColor(R.attr.strongAgainstColor));
 
         Bitmap bmp = createPreviewBitmap(enemy);
