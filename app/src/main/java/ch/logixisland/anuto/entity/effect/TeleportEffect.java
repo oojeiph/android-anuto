@@ -38,10 +38,10 @@ public class TeleportEffect extends Effect implements Entity.Listener {
 
     private Enemy mTarget;
 
-    private float mDistance;
-    private Vector2 mMoveDirection;
-    private float mMoveStep;
-    private TeleportDrawable mDrawObject;
+    private final float mDistance;
+    private final Vector2 mMoveDirection;
+    private final float mMoveStep;
+    private final TeleportDrawable mDrawObject;
     private StaticData mStaticData;
 
     public TeleportEffect(Entity origin, Vector2 position, Enemy target, float distance) {

@@ -25,7 +25,7 @@ public class BouncingLaser extends Effect {
     private final static int ALPHA_STEP = (int) (ALPHA_START / (GameEngine.TARGET_FRAME_RATE * VISIBLE_EFFECT_DURATION));
 
     private class LaserDrawable implements Drawable {
-        private Paint mPaint;
+        private final Paint mPaint;
         private int mAlpha = ALPHA_START;
 
         private LaserDrawable() {
@@ -56,15 +56,15 @@ public class BouncingLaser extends Effect {
         }
     }
 
-    private float mDamage;
-    private int mBounceCount;
-    public float mMaxBounceDist;
+    private final float mDamage;
+    private final int mBounceCount;
+    public final float mMaxBounceDist;
     private Enemy mOrigin;
-    private Enemy mTarget;
+    private final Enemy mTarget;
     private Vector2 mTargetPos;
     private Collection<Enemy> mPrevTargets;
 
-    private LaserDrawable mDrawObject;
+    private final LaserDrawable mDrawObject;
 
     public BouncingLaser(Entity origin, Vector2 position, Enemy target, float damage) {
         this(origin, position, target, damage, 0, 0);

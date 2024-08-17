@@ -32,8 +32,8 @@ public class TowerInfoFragment extends AnutoFragment implements View.OnClickList
     private Handler mHandler;
 
     private TextView txt_level;
-    private TextView[] txt_property = new TextView[6];
-    private TextView[] txt_property_text = new TextView[6];
+    private final TextView[] txt_property = new TextView[6];
+    private final TextView[] txt_property_text = new TextView[6];
 
     private Button btn_strategy;
     private Button btn_lock_target;

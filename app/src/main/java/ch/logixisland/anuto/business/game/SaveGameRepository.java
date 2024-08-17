@@ -1,6 +1,5 @@
 package ch.logixisland.anuto.business.game;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -54,7 +53,6 @@ public class SaveGameRepository {
     public SaveGameInfo createSaveGame(Bitmap screenshot, int score, int wave, int lives) {
         Date date = new Date();
 
-        @SuppressLint("SimpleDateFormat")
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmssSSS");
         File folder = new File(mContext.getFilesDir() + File.separator
                 + "savegame" + File.separator

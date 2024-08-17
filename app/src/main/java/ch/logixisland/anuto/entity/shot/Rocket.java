@@ -27,13 +27,13 @@ public class Rocket extends Shot implements SpriteTransformation, TargetTracker.
         SpriteTemplate mSpriteTemplateFire;
     }
 
-    private float mDamage;
-    private float mRadius;
+    private final float mDamage;
+    private final float mRadius;
     private float mAngle;
-    private TargetTracker mTracker;
+    private final TargetTracker mTracker;
 
-    private StaticSprite mSprite;
-    private AnimatedSprite mSpriteFire;
+    private final StaticSprite mSprite;
+    private final AnimatedSprite mSpriteFire;
 
     public Rocket(Entity origin, Vector2 position, float damage, float radius) {
         super(origin);

@@ -37,12 +37,12 @@ public class Mine extends Shot implements SpriteTransformation {
         SpriteTemplate mSpriteTemplate;
     }
 
-    private float mDamage;
-    private float mRadius;
+    private final float mDamage;
+    private final float mRadius;
     private float mAngle;
     private boolean mFlying;
     private float mRotationStep;
-    private SampledFunction mHeightScalingFunction;
+    private final SampledFunction mHeightScalingFunction;
     private Vector2 mTarget;
 
     private StaticSprite mSpriteFlying;
@@ -104,10 +104,6 @@ public class Mine extends Shot implements SpriteTransformation {
         mSpriteMine = getSpriteFactory().createStatic(Layers.BOTTOM, s.mSpriteTemplate);
         mSpriteMine.setListener(this);
         mSpriteMine.setIndex(index);
-    }
-
-    public Vector2 getTarget() {
-        return mTarget;
     }
 
     @Override

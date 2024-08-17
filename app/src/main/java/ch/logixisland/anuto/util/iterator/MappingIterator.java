@@ -2,8 +2,8 @@ package ch.logixisland.anuto.util.iterator;
 
 class MappingIterator<F, T> extends StreamIterator<T> {
 
-    private Function<? super F, ? extends T> mMapper;
-    private StreamIterator<F> mOriginal;
+    private final Function<? super F, ? extends T> mMapper;
+    private final StreamIterator<F> mOriginal;
 
     MappingIterator(StreamIterator<F> original, Function<? super F, ? extends T> mapper) {
         mOriginal = original;

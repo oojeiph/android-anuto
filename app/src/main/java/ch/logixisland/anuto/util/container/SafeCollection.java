@@ -142,7 +142,6 @@ public class SafeCollection<T> implements Collection<T>, StreamIterable<T> {
 
     @Override
     public <T1> T1[] toArray(T1[] array) {
-        //noinspection SuspiciousToArrayCall
         return mItems.toArray(array);
     }
 

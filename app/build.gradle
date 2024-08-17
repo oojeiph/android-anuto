@@ -1,14 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
-
     defaultConfig {
         applicationId "ch.logixisland.anuto"
-        minSdkVersion 17
-        targetSdkVersion 33
-        versionCode 32
-        versionName "0.11"
+        compileSdk 34
+        minSdkVersion 23
+        targetSdkVersion 35
+        versionCode 33
+        versionName "0.12"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
@@ -30,6 +29,6 @@ android {
 
 dependencies {
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test:rules:1.5.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test:rules:1.6.1'
 }

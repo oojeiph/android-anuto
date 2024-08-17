@@ -9,19 +9,19 @@ import ch.logixisland.anuto.entity.tower.TowerStrategy;
 
 public class TowerInfo {
 
-    private int mValue;
-    private int mLevel;
-    private int mLevelMax;
-    private boolean mEnhanceable;
-    private int mEnhanceCost;
-    private boolean mUpgradeable;
-    private int mUpgradeCost;
-    private boolean mSellable;
-    private boolean mCanLockTarget;
+    private final int mValue;
+    private final int mLevel;
+    private final int mLevelMax;
+    private final boolean mEnhanceable;
+    private final int mEnhanceCost;
+    private final boolean mUpgradeable;
+    private final int mUpgradeCost;
+    private final boolean mSellable;
+    private final boolean mCanLockTarget;
     private boolean mDoesLockTarget;
-    private boolean mHasStrategy;
+    private final boolean mHasStrategy;
     private TowerStrategy mStrategy;
-    private List<TowerInfoValue> mProperties;
+    private final List<TowerInfoValue> mProperties;
 
     public TowerInfo(Tower tower, int credits, boolean controlsEnabled) {
         mValue = tower.getValue();

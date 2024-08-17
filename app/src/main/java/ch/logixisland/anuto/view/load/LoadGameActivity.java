@@ -19,7 +19,7 @@ import ch.logixisland.anuto.view.AnutoActivity;
 public class LoadGameActivity extends AnutoActivity implements AdapterView.OnItemClickListener,
         ViewTreeObserver.OnScrollChangedListener {
 
-    public static int CONTEXT_MENU_DELETE_ID = 0;
+    public static final int CONTEXT_MENU_DELETE_ID = 0;
 
     private final GameLoader mGameLoader;
     private final SaveGameRepository mSaveGameRepository;

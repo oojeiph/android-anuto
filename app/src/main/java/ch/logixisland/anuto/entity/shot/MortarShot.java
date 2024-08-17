@@ -28,12 +28,12 @@ public class MortarShot extends Shot implements SpriteTransformation {
         SpriteTemplate mSpriteTemplate;
     }
 
-    private float mDamage;
-    private float mRadius;
-    private float mAngle;
-    private SampledFunction mHeightScalingFunction;
+    private final float mDamage;
+    private final float mRadius;
+    private final float mAngle;
+    private final SampledFunction mHeightScalingFunction;
 
-    private StaticSprite mSprite;
+    private final StaticSprite mSprite;
 
     public MortarShot(Entity origin, Vector2 position, Vector2 target, float damage, float radius) {
         super(origin);

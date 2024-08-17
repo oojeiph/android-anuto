@@ -62,9 +62,9 @@ public class Teleporter extends Tower implements SpriteTransformation {
     private float mTeleportDistance;
     private final Aimer mAimer = new Aimer(this);
 
-    private StaticSprite mSpriteBase;
-    private StaticSprite mSpriteTower;
-    private Sound mSound;
+    private final StaticSprite mSpriteBase;
+    private final StaticSprite mSpriteTower;
+    private final Sound mSound;
 
     private Teleporter(GameEngine gameEngine) {
         super(gameEngine, TOWER_PROPERTIES);
@@ -169,8 +169,6 @@ public class Teleporter extends Tower implements SpriteTransformation {
 
     @Override
     public StreamIterator<Enemy> getPossibleTargets() {
-        StaticData s = (StaticData) getStaticData();
-
         return super.getPossibleTargets()
                 .filter(enemy -> !enemy.isBeingTeleported() && !enemy.wasTeleported());
     }

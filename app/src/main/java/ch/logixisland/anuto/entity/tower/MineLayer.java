@@ -94,15 +94,15 @@ public class MineLayer extends Tower implements SpriteTransformation {
         public SpriteTemplate mSpriteTemplate;
     }
 
-    private float mAngle;
+    private final float mAngle;
     private int mMaxMineCount;
     private float mExplosionRadius;
     private boolean mShooting;
     private Collection<Line> mSections;
-    private Collection<Mine> mMines = new ArrayList<>();
+    private final Collection<Mine> mMines = new ArrayList<>();
 
-    private AnimatedSprite mSprite;
-    private Sound mSound;
+    private final AnimatedSprite mSprite;
+    private final Sound mSound;
 
     private final Entity.Listener mMineListener = new Entity.Listener() {
         @Override

@@ -85,11 +85,11 @@ public class GlueTower extends Tower implements SpriteTransformation {
     private float mGlueIntensity;
     private boolean mShooting;
     private float mCanonOffset;
-    private SubCanon[] mCanons = new SubCanon[8];
-    private Collection<Vector2> mTargets = new ArrayList<>();
-    private StaticSprite mSpriteBase;
+    private final SubCanon[] mCanons = new SubCanon[8];
+    private final Collection<Vector2> mTargets = new ArrayList<>();
+    private final StaticSprite mSpriteBase;
 
-    private StaticSprite mSpriteTower;
+    private final StaticSprite mSpriteTower;
     private final TickTimer mUpdateTimer = TickTimer.createInterval(0.1f);
 
     private GlueTower(GameEngine gameEngine) {

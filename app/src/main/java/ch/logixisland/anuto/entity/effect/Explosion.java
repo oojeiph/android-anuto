@@ -22,7 +22,7 @@ public class Explosion extends Effect {
     private final static int ALPHA_STEP = (int) (ALPHA_START / (GameEngine.TARGET_FRAME_RATE * EFFECT_DURATION));
 
     private class ExplosionDrawable implements Drawable {
-        private Paint mPaint;
+        private final Paint mPaint;
         private int mAlpha = ALPHA_START;
 
         private ExplosionDrawable() {
@@ -52,11 +52,11 @@ public class Explosion extends Effect {
         }
     }
 
-    private float mDamage;
-    private float mRadius;
+    private final float mDamage;
+    private final float mRadius;
 
-    private ExplosionDrawable mDrawObject;
-    private Sound mSound;
+    private final ExplosionDrawable mDrawObject;
+    private final Sound mSound;
 
     public Explosion(Entity origin, Vector2 position, float damage, float radius) {
         super(origin, EFFECT_DURATION);
@@ -102,10 +102,5 @@ public class Explosion extends Effect {
             Enemy enemy = enemies.next();
             enemy.damage(mDamage, getOrigin());
         }
-    }
-
-    @Override
-    protected void effectEnd() {
-
     }
 }

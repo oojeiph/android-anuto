@@ -12,7 +12,7 @@ public abstract class Effect extends Entity {
         Ended
     }
 
-    private Entity mOrigin;
+    private final Entity mOrigin;
     private TickTimer mTimer;
     private State mState;
 

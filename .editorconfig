@@ -17,7 +17,7 @@ insert_final_newline = true
 charset = utf-8
 
 # Tab indentation
-[makefile,Makefile]
+[Makefile]
 indent_style = tab
 ## PEP 0008 https://www.python.org/dev/peps/pep-0008/
 [*.py]

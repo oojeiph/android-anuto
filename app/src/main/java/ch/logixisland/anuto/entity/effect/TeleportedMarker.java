@@ -50,7 +50,7 @@ public class TeleportedMarker extends Effect implements Entity.Listener {
 
     private final Entity mMarked;
     private StaticData mStaticData;
-    private MarkerDrawable mDrawable;
+    private final MarkerDrawable mDrawable;
 
     public TeleportedMarker(Entity marked) {
         super(marked);

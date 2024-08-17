@@ -62,12 +62,12 @@ public class MachineGun extends Tower implements SpriteTransformation {
         SpriteTemplate mSpriteTemplateCanon;
     }
 
-    private float mBaseReloadTime;
+    private final float mBaseReloadTime;
     private float mAngle = 90f;
-    private StaticSprite mSpriteBase;
-    private AnimatedSprite mSpriteCanon;
+    private final StaticSprite mSpriteBase;
+    private final AnimatedSprite mSpriteCanon;
     private int mShotCount = 0;
-    private Sound mSound;
+    private final Sound mSound;
     private final Aimer mAimer = new Aimer(this);
 
     private MachineGun(GameEngine gameEngine) {

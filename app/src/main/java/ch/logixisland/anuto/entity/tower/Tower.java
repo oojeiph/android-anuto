@@ -22,7 +22,7 @@ public abstract class Tower extends Entity {
         void propertiesChanged();
     }
 
-    private TowerProperties mTowerProperties;
+    private final TowerProperties mTowerProperties;
 
     private boolean mBuilt;
     private int mValue;
@@ -35,7 +35,7 @@ public abstract class Tower extends Entity {
 
     private Plateau mPlateau;
 
-    private TickTimer mReloadTimer;
+    private final TickTimer mReloadTimer;
     private RangeIndicator mRangeIndicator;
     private LevelIndicator mLevelIndicator;
 

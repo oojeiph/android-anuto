@@ -21,7 +21,7 @@ public class TowerProperties {
 
     public static class Builder {
 
-        private TowerProperties mResult = new TowerProperties();
+        private final TowerProperties mResult = new TowerProperties();
 
         public Builder setValue(int value) {
             mResult.mValue = value;

@@ -62,9 +62,9 @@ public class SimpleLaser extends Tower implements SpriteTransformation {
     private float mAngle = 90f;
     private final Aimer mAimer = new Aimer(this);
 
-    private StaticSprite mSpriteBase;
-    private StaticSprite mSpriteCanon;
-    private Sound mSound;
+    private final StaticSprite mSpriteBase;
+    private final StaticSprite mSpriteCanon;
+    private final Sound mSound;
 
     private SimpleLaser(GameEngine gameEngine) {
         super(gameEngine, TOWER_PROPERTIES);

@@ -47,7 +47,7 @@ public class Soldier extends Enemy implements SpriteTransformation {
         }
     }
 
-    private ReplicatedSprite mSprite;
+    private final ReplicatedSprite mSprite;
 
     private Soldier(GameEngine gameEngine) {
         super(gameEngine, ENEMY_PROPERTIES);

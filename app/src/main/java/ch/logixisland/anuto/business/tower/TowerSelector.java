@@ -38,7 +38,7 @@ public class TowerSelector implements ScoreBoard.Listener, Entity.Listener, Towe
     private TowerInfo mTowerInfo;
     private Tower mSelectedTower;
 
-    private Collection<Listener> mListeners = new CopyOnWriteArrayList<>();
+    private final Collection<Listener> mListeners = new CopyOnWriteArrayList<>();
 
     public TowerSelector(GameEngine gameEngine, ScoreBoard scoreBoard) {
         mGameEngine = gameEngine;

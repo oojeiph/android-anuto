@@ -36,9 +36,9 @@ class MapsAdapter extends BaseAdapter {
     }
 
     static private class ViewHolder {
-        ImageView img_thumb;
-        TextView txt_name;
-        TextView txt_highscore;
+        final ImageView img_thumb;
+        final TextView txt_name;
+        final TextView txt_highscore;
 
         ViewHolder(View view) {
             img_thumb = view.findViewById(R.id.img_thumb);
