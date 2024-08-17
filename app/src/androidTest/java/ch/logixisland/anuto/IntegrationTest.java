@@ -1,7 +1,7 @@
 package ch.logixisland.anuto;
 
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.filters.LargeTest;
-import androidx.test.rule.ActivityTestRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.Rule;
@@ -15,7 +15,7 @@ import ch.logixisland.anuto.view.game.GameActivity;
 public class IntegrationTest {
 
     @Rule
-    public ActivityTestRule<GameActivity> mActivityRule = new ActivityTestRule<>(GameActivity.class);
+    public ActivityScenarioRule<GameActivity> mActivityRule = new ActivityScenarioRule<>(GameActivity.class);
 
     @Test
     public void integrationTest() {
