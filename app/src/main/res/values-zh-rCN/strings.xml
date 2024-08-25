@@ -1,0 +1,135 @@
+<!-- File "app/src/main/res/values/theme_index.xml" -->
+
+<!-- File "app/src/main/res/values/strings.xml" -->
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">纸上塔防</string>
+
+    <string name="menu">菜单</string>
+    <string name="build_tower">建造</string>
+    <string name="next_wave">下一波</string>
+
+    <string name="restart">重新开始</string>
+    <string name="save_game">保存游戏</string>
+    <string name="game_saved">已保存</string>
+    <string name="load_game">加载游戏</string>
+    <string name="change_map">选择地图</string>
+    <string name="settings">设置</string>
+
+    <string name="delete">删除</string>
+
+    <string name="sound">游戏音效</string>
+    <string name="theme">主题</string>
+    <string name="change_theme">选择主题</string>
+    <string name="change_theme_warning">你确实要更换主题吗?您的游戏进度将会丢失</string>
+    <string name="back_button_mode">点按退出按钮退出软件</string>
+    <string name="reset_highscores">重置最高分数</string>
+    <string name="reset_highscores_warning">你确定要重置最高分数吗?</string>
+    <string name="start_tutorial">开始教程</string>
+    <string name="start_tutorial_warning">您确定要学习教程吗?您的游戏进度将会丢失</string>
+    <string name="transparent_menus">透明菜单</string>
+
+    <string name="game_over">游戏失败!</string>
+    <string name="score">分数</string>
+
+    <string name="credits">金钱</string>
+    <string name="lives">生命</string>
+    <string name="wave">波次</string>
+    <string name="bonus">奖金</string>
+
+    <string name="level">等级</string>
+    <string name="damage">伤害</string>
+    <string name="reload">加载时间</string>
+    <string name="range">攻击范围</string>
+    <string name="splash">爆炸半径</string>
+    <string name="distance">距离</string>
+    <string name="intensity">强度</string>
+    <string name="duration">持续时间</string>
+    <string name="inflicted">承受</string>
+    <string name="dps">伤害/秒</string>
+
+    <string name="lock_target">锁定目标</string>
+    <string name="strategy">战斗策略</string>
+    <string name="enhance">强化</string>
+    <string name="upgrade">升级</string>
+    <string name="sell">卖出</string>
+
+    <string name="on">开启</string>
+    <string name="off">关闭</string>
+    <string name="twice">双击</string>
+
+    <string name="strategy_closest">攻击最近</string>
+    <string name="strategy_weakest">最弱</string>
+    <string name="strategy_strongest">输出优先</string>
+    <string name="strategy_first">攻击最前</string>
+    <string name="strategy_last">攻击最后</string>
+
+    <string name="theme_original">默认主题</string>
+    <string name="theme_dark">黑暗</string>
+    <string name="theme_colour">动态取色</string>
+
+    <string name="map_original_name">默认</string>
+    <string name="map_waiting_line_name">厌恶排队</string>
+    <string name="map_turn_round_name">转圈</string>
+    <string name="map_hurry_name">光速破防</string>
+    <string name="map_civyshk_2y_name">Civyshk 2Y</string>
+    <string name="map_civyshk_line5_name">Civyshk Line5</string>
+    <string name="map_civyshk_labyrinth_name">Civyshk Labyrinth</string>
+    <string name="map_civyshk_yard_name">Civyshk Yard</string>
+    <string name="map_higgledy_piggledy_name">Higgledy Piggledy</string>
+    <string name="map_big_u_name">Big U</string>
+    <string name="map_cloverleaf_name">Cloverleaf</string>
+    <string name="map_roundabout_name">环状线</string>
+    <string name="map_runway_name">T台</string>
+    <string name="map_wtf_name">啊?</string>
+    <string name="map_turn_left_name">左转</string>
+    <string name="map_turn_right_name">右转</string>
+    <string name="map_oddball_name">Oddball</string>
+    <string name="map_spiral1_name">Spiral v1</string>
+    <string name="map_chaos_name">混乱</string>
+    <string name="map_moar_chaos_name">Moar Chaos</string>
+    <string name="map_spiral2_name">Spiral v2</string>
+    <string name="map_nou_name">不，U</string>
+    <string name="map_highscore_name">高分!</string>
+    <string name="press_back_button_again_toast">再次按返回键退出</string>
+
+    <string name="tutorial">入门教程</string>
+    <string name="got_it">知道了</string>
+    <string name="skip_tutorial">跳过教程</string>
+
+    <string name="tutorial_build_tower">欢迎来到纸上塔防!请先在地图上建造一个炮塔</string>
+    <string name="tutorial_credits">如果一个炮塔的价格签为红色，则表明您没有足够金钱购买炮塔，金钱可以通过杀死怪物和击退袭击波获得</string>
+    <string name="tutorial_tower_options_1">点击一个塔以查看其攻击范围，再次点击可以打开菜单查看更多信息</string>
+    <string name="tutorial_tower_options_2">该策略决定了炮塔如何锁定攻击目标。锁定目标意味着只要当前目标保持在射程内，炮塔就不会切换目标。</string>
+    <string name="tutorial_tower_options_3">增强一座炮塔将使其性能更好。升级一座炮塔将用更好的炮塔取代原来的\n
+  \n
+  <b>提示：</b>如果升级炮塔，已经用于增强的金钱将不会返回。</string>
+    <string name="tutorial_tower_options_4">卖掉炮塔会把它拆除，你会得到一些金钱。\n
+  \n
+  <b>提示：</b>炮塔的价值会随着时间的推移而降低。</string>
+    <string name="tutorial_next_wave">按“下一波”召唤下一波怪物，不要让任何敌人成功侵入!\n
+  \n
+  <b>提示：</b>如果您在怪物未被击退时时召唤波次，您将获得额外奖励！</string>
+    <string name="tutorial_enemies">如果敌人成功侵入，你就失去一条命。如果你已经失去全部生命，游戏将会失败\n
+  \n
+  <b>提示：</b>有些炮塔对某些敌人的攻击有加成</string>
+    <string name="tutorial_finish">祝您玩的开心!您可以在设置里再次打开教程</string>
+
+    <string name="enemy_stats">怪物图鉴</string>
+    <string name="name">名称:</string>
+    <string name="health">生命值:</string>
+    <string name="speed">速度:</string>
+    <string name="reward">积分:</string>
+    <string name="weak_against">弱抗:</string>
+    <string name="strong_against">强抗:</string>
+    <string name="none">默认</string>
+
+    <string name="enemy_soldier">Soldier</string>
+    <string name="enemy_blob">Blob</string>
+    <string name="enemy_sprinter">Sprinter</string>
+    <string name="enemy_flyer">Flyer</string>
+    <string name="enemy_healer">Healer</string>
+</resources>
+
+<!-- File "app/src/main/res/values/back_button_mode.xml" -->
+
