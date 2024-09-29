@@ -8,35 +8,12 @@
         android:id="@+id/grid_savegames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:columnWidth="150dp"
         android:numColumns="auto_fit"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
+        android:verticalSpacing="20dp"
+        android:horizontalSpacing="20dp"
         android:clipToPadding="false"
         android:stretchMode="columnWidth"
         android:scrollbarStyle="outsideOverlay" />
-
-    <ImageView
-        android:id="@+id/arrow_up"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/transparent"
-        android:layout_alignParentTop="true"
-        android:rotation="270"
-        android:src="@drawable/select_map_arrow" />
-
-    <ImageView
-        android:id="@+id/arrow_down"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/transparent"
-        android:layout_alignParentBottom="true"
-        android:rotation="90"
-        android:src="@drawable/select_map_arrow" />
 
 </RelativeLayout>

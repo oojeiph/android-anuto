@@ -1,12 +1,12 @@
 package ch.logixisland.anuto.view.load;
 
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewTreeObserver;
+import android.view.WindowInsets;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageView;
 
 import ch.logixisland.anuto.AnutoApplication;
 import ch.logixisland.anuto.GameFactory;
@@ -15,9 +15,9 @@ import ch.logixisland.anuto.business.game.GameLoader;
 import ch.logixisland.anuto.business.game.SaveGameInfo;
 import ch.logixisland.anuto.business.game.SaveGameRepository;
 import ch.logixisland.anuto.view.AnutoActivity;
+import ch.logixisland.anuto.view.ApplySafeInsetsHandler;
 
-public class LoadGameActivity extends AnutoActivity implements AdapterView.OnItemClickListener,
-        ViewTreeObserver.OnScrollChangedListener {
+public class LoadGameActivity extends AnutoActivity implements AdapterView.OnItemClickListener {
 
     public static final int CONTEXT_MENU_DELETE_ID = 0;
 
@@ -25,11 +25,6 @@ public class LoadGameActivity extends AnutoActivity implements AdapterView.OnIte
     private final SaveGameRepository mSaveGameRepository;
 
     private SaveGamesAdapter mAdapter;
-
-    private ImageView arrow_up;
-    private ImageView arrow_down;
-    private GridView grid_savegames;
-
 
     public LoadGameActivity() {
         GameFactory factory = AnutoApplication.getInstance().getGameFactory();
@@ -50,15 +45,15 @@ public class LoadGameActivity extends AnutoActivity implements AdapterView.OnIte
 
         mAdapter = new SaveGamesAdapter(this, mSaveGameRepository);
 
-        arrow_up = findViewById(R.id.arrow_up);
-        arrow_down = findViewById(R.id.arrow_down);
-
-        grid_savegames = findViewById(R.id.grid_savegames);
+        GridView grid_savegames = findViewById(R.id.grid_savegames);
         grid_savegames.setOnItemClickListener(this);
-        grid_savegames.getViewTreeObserver().addOnScrollChangedListener(this);
-        grid_savegames.post(this::updateArrowVisibility);
         grid_savegames.setAdapter(mAdapter);
         registerForContextMenu(grid_savegames);
+
+        int additionalPadding = (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics());
+
+        grid_savegames.setOnApplyWindowInsetsListener(new ApplySafeInsetsHandler(additionalPadding));
     }
 
     @Override
@@ -84,30 +79,5 @@ public class LoadGameActivity extends AnutoActivity implements AdapterView.OnIte
         }
 
         return false;
-    }
-
-    @Override
-    public void onScrollChanged() {
-        updateArrowVisibility();
-    }
-
-    private void updateArrowVisibility() {
-        if (grid_savegames.getChildCount() <= 0) {
-            arrow_up.setVisibility(View.INVISIBLE);
-            arrow_down.setVisibility(View.INVISIBLE);
-            return;
-        }
-
-        if (grid_savegames.getFirstVisiblePosition() == 0) {
-            arrow_up.setVisibility(grid_savegames.getChildAt(0).getTop() < -10 ? View.VISIBLE : View.INVISIBLE);
-        } else {
-            arrow_up.setVisibility(grid_savegames.getFirstVisiblePosition() > 0 ? View.VISIBLE : View.INVISIBLE);
-        }
-
-        if (grid_savegames.getLastVisiblePosition() == mAdapter.getCount() - 1) {
-            arrow_down.setVisibility(grid_savegames.getChildAt(grid_savegames.getChildCount() - 1).getBottom() > grid_savegames.getHeight() + 10 ? View.VISIBLE : View.INVISIBLE);
-        } else {
-            arrow_down.setVisibility(grid_savegames.getLastVisiblePosition() < mAdapter.getCount() - 1 ? View.VISIBLE : View.INVISIBLE);
-        }
     }
 }
