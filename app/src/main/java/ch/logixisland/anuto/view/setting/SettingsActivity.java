@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import ch.logixisland.anuto.engine.theme.ActivityType;
 import ch.logixisland.anuto.view.AnutoActivity;
+import ch.logixisland.anuto.view.ApplySafeInsetsHandler;
 
 public class SettingsActivity extends AnutoActivity {
     @Override
@@ -18,5 +19,7 @@ public class SettingsActivity extends AnutoActivity {
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, new SettingsFragment())
                 .commit();
+
+        findViewById(android.R.id.content).setOnApplyWindowInsetsListener(new ApplySafeInsetsHandler());
     }
 }

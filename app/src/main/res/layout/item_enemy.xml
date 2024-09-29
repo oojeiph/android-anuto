@@ -10,9 +10,8 @@
         <ImageView
             android:id="@+id/img_enemy"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:paddingTop="15dp"
             android:paddingBottom="10dp"
             android:scaleType="fitCenter" />
     </TableRow>
@@ -22,7 +21,8 @@
         <TextView
             android:id="@+id/txt_name_text"
             android:layout_column="0"
-            android:paddingRight="20dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="10dp"
             android:text="@string/name" />
 
         <TextView
@@ -36,7 +36,8 @@
         <TextView
             android:id="@+id/txt_health_text"
             android:layout_column="0"
-            android:paddingRight="20dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="10dp"
             android:text="@string/health" />
 
         <TextView
@@ -50,7 +51,8 @@
         <TextView
             android:id="@+id/txt_speed_text"
             android:layout_column="0"
-            android:paddingRight="20dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="10dp"
             android:text="@string/speed" />
 
         <TextView
@@ -64,7 +66,8 @@
         <TextView
             android:id="@+id/txt_reward_text"
             android:layout_column="0"
-            android:paddingRight="20dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="10dp"
             android:text="@string/reward" />
 
         <TextView
@@ -78,7 +81,8 @@
         <TextView
             android:id="@+id/txt_weak_against_text"
             android:layout_column="0"
-            android:paddingRight="20dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="10dp"
             android:text="@string/weak_against" />
 
         <TextView
@@ -92,7 +96,9 @@
         <TextView
             android:id="@+id/txt_strong_against_text"
             android:layout_column="0"
-            android:paddingRight="20dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="20dp"
             android:text="@string/strong_against" />
 
         <TextView
